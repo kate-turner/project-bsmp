@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const graphQlHttp = require('express-graphql');
 const { buildSchema } = require('graphql');
+const mongoose = require('mongoose');
 
 const app = express();
 
@@ -56,5 +57,7 @@ app.use('/graphql', graphQlHttp({
 app.get('/',  (req, res, next) => {
     res.send('Up and rolling')
 })
+
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-tdxnv.mongodb.net/test?retryWrites=true&w=majority`)
 
 app.listen(3000);
