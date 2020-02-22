@@ -45,7 +45,6 @@ app.use('/graphql', graphQlHttp({
                 title: args.planInput.title,
                 description: args.planInput.description
             }
-            console.log(args)
             plans.push(plan);
             return plan;
         }
