@@ -1,6 +1,7 @@
 {
     "env": {
         "MONGO_USER": "kturner",
-        "MONGO_PASSWORD": "1bMooJMqCxlA2bfk"
+        "MONGO_PASSWORD": "1bMooJMqCxlA2bfk",
+        "MONGO_DB": "project-bsmp"
     }
 }
